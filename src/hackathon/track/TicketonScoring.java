@@ -1,6 +1,8 @@
 package hackathon.track;
 
 public class TicketonScoring implements Scoring {
+    private static final int MAX_SCORE = 100;
+
     @Override
     public String getName() {
         return "Easy to Use";
@@ -8,6 +10,6 @@ public class TicketonScoring implements Scoring {
 
     @Override
     public int getMaxScore() {
-        return 50;
+        return MAX_SCORE;
     }
 }

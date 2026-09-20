@@ -1,6 +1,8 @@
 package hackathon.track;
 
 public class ArbuzScoring implements Scoring {
+    private static final int MAX_SCORE = 100;
+
     @Override
     public String getName() {
         return "Delivery Speed";
@@ -8,6 +10,6 @@ public class ArbuzScoring implements Scoring {
 
     @Override
     public int getMaxScore() {
-        return 50;
+        return MAX_SCORE;
     }
 }

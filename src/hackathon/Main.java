@@ -1,5 +1,8 @@
 package hackathon;
 
+import hackathon.notification.ArbuzNotificationFactory;
+import hackathon.notification.NotificationFactory;
+import hackathon.notification.TicketonNotificationFactory;
 import hackathon.track.ArbuzTrackFactory;
 import hackathon.track.Scoring;
 import hackathon.track.Task;
@@ -9,6 +12,12 @@ import hackathon.track.TrackFactory;
 public class Main {
 
     public static void main(String[] args) {
+        NotificationFactory arbuzNotifications = new ArbuzNotificationFactory();
+        arbuzNotifications.send();
+
+        NotificationFactory ticketonNotifications = new TicketonNotificationFactory();
+        ticketonNotifications.send();
+
         printTrack(new ArbuzTrackFactory());
         printTrack(new TicketonTrackFactory());
     }
